@@ -1,7 +1,9 @@
-// ? nav button code
+// ? nav menu code
 
-const loginBtn = document.getElementById("login")
 
-loginBtn.addEventListener("click", () => {
-    
-})
+    const menuButton = document.getElementById('menu-button');
+    const menu = document.getElementById('menu');
+
+    menuButton.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
