@@ -1,64 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style type="text/tailwindcss">
-        @layer utilities {
-            .vanish {
-                display: none;
-            }
+      @layer utilities {
+        .vanish {
+          display: none;
         }
+      }
     </style>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clifford: '#da373d',
-                        main: '#371D7E',
-                        sec: '#9C9CD2',
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              main: "#371D7E",
+              sec: "#9C9CD2",
+            },
+          },
+        },
+        
+      };
     </script>
-</head>
-<body>
-  <!-- Nav Code Start -->
-  <nav class="flex items-center justify-between flex-wrap bg-main p-4">
-    <div class="flex items-center flex-shrink-0 text-white mr-6">
-      <span class="font-semibold text-xl tracking-tight mySpan p-1 rounded-md">Gen-Z</span>
-    </div>
-    <div class="block lg:hidden">
-      <button id="menu-button" class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-      </button>
-    </div>
-    <div id="menu" class="w-full  flex-grow lg:flex lg:items-center lg:w-auto hidden ">
-      <div class="text-sm lg:flex-grow">
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-          Home
-        </a>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-          About
-        </a>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-          Contact us
-        </a>
+  </head>
+  <body>
+    <!-- Nav Code Start -->
+    <nav
+      class="flex items-center justify-between flex-wrap bg-main p-4 relative"
+    >
+      <div class="flex items-center flex-shrink-0 text-white mr-6">
+        <span class="font-semibold text-xl tracking-tight mySpan p-1 rounded-md"
+          >Gen-Z</span
+        >
       </div>
-      <div>
-        <a href="#" id="login" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
-          <i class="fa-solid fa-lock" style="color: #FFD43B;"></i>
-        </a>
+      <div class="block lg:hidden">
+        <button
+          id="menu-button"
+          class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
+        >
+          <svg
+            class="fill-current h-3 w-3"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
       </div>
-    </div>
-  </nav>
-  <!-- Nav Code End -->
-   <script src="./app.js"></script>
-</body>
+      <div
+        id="menu"
+        class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden"
+      >
+        <div class="text-sm lg:flex-grow">
+          <a
+            href="#responsive-header"
+            class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+          >
+            Home
+          </a>
+          <a
+            href="#responsive-header"
+            class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+          >
+            About
+          </a>
+          <a
+            href="#responsive-header"
+            class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
+          >
+            Contact us
+          </a>
+        </div>
+        <div>
+          <a
+            href="#"
+            id="login"
+            class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mr-10 mt-4 lg:mt-0"
+          >
+            <i class="fa-solid fa-lock" style="color: #ffd43b"></i>
+          </a>
+        </div>
+      </div>
+            <!--? Login menu Code -->
+
+      <div
+        class="hidden absolute top-16 right-5 w-[300px] h-[300px] p-4 bg-gray-100 shadow-md rounded-md flex flex-col justify-around max-lg:top-56 max-lg:left-0 max-sm:w-auto"
+        id="login-menu"
+      >
+        <div class="login-text">
+          <h1 class="text-2xl font-semibold">Login</h1>
+          <p>start now to fix your problems</p>
+        </div>
+        <div class="login-btns flex flex-col [&>button]:my-2">
+          <button
+            class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full"
+            id="login-menu-btn"
+          >
+            Login
+          </button>
+          <button
+            class="bg-gray-200 hover:bg-gray-300 text-blue-400 font-bold py-2 px-4 rounded-full"
+          >
+            Register
+          </button>
+        </div>
+      </div>
+      <!--? Login menu code end -->
+    </nav>
+    <!-- Nav Code End -->
+     
+    <script src="./app.js"></script>
+  </body>
 </html>
