@@ -17,16 +17,14 @@ login.addEventListener("click", () => {
   loginMenu.classList.toggle("hidden");
 });
 
+console.log(!loginMenu.classList.contains("hidden"));
+
+// ? event listner for closing login menu automatically after 5 seconds
 setInterval(() => {
     if(!loginMenu.classList.contains("hidden")){
         loginMenu.classList.add("hidden");
     }
 }, 5000)
-
-console.log(!loginMenu.classList.contains("hidden"));
-
-// ? event listner for closing login menu automatically after 5 seconds
-
 
     //! temp login page
 const loginPage = document.createElement('div')
@@ -73,3 +71,50 @@ loginMenuBtn.addEventListener("click", () => {
     
   document.body.appendChild(loginPage)
 })
+
+/** try this idea tommorow
+ * 
+ * 
+ * <section id="mainSection">
+  <div id="homePage" class="page">
+    <h1>Hello World</h1>
+  </div>
+
+  <div id="aboutPage" class="page" style="display: none;">
+    <!-- About page content -->
+  </div>
+
+  <div id="contactPage" class="page" style="display: none;">
+    <!-- Contact Us page content -->
+  </div>
+
+  <div id="registerPage" class="page" style="display: none;">
+    <!-- Register page content -->
+  </div>
+</section>
+
+<nav>
+  <button id="homeBtn">Home</button>
+  <button id="aboutBtn">About</button>
+  <button id="contactBtn">Contact Us</button>
+  <button id="registerBtn">Register</button>
+</nav>
+
+<script>
+  const pages = document.querySelectorAll('.page');
+  
+  function showPage(pageId) {
+    pages.forEach(page => {
+      page.style.display = (page.id === pageId) ? 'block' : 'none';
+    });
+  }
+
+  document.getElementById('homeBtn').addEventListener('click', () => showPage('homePage'));
+  document.getElementById('aboutBtn').addEventListener('click', () => showPage('aboutPage'));
+  document.getElementById('contactBtn').addEventListener('click', () => showPage('contactPage'));
+  document.getElementById('registerBtn').addEventListener('click', () => showPage('registerPage'));
+</script>
+
+ * 
+ * 
+ */
