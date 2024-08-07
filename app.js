@@ -4,6 +4,29 @@ const login = document.getElementById("login");
 const loginMenu = document.getElementById("login-menu");
 const loginMenuBtn = document.getElementById("login-menu-btn");
 
+// ? Swiper Run
+
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  slidesPerView: "auto",
+  grabCursor: true,
+  initalSlide:4,
+  centeredSlides: true,
+  spaceBetween: 18,
+  freeMode: false,
+  speed: 1000,
+  autoplay: {
+    delay: 5000,
+  },
+  on:{
+    click(event){
+      swiper.slideTo(this.clickedIndex);
+    }
+  }
+  
+});
+
+
 // ? event listner for showing and hiding menu
 
 menuButton.addEventListener("click", () => {
