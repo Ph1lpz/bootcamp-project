@@ -64,20 +64,7 @@ setInterval(() => {
 
 
 
-    //? login page code
-
-    document.getElementById('createAccBtn').addEventListener('click', () => {showPage('registerPage')})
-
-    document.getElementById('showEyeLogin').addEventListener('click' , () => {
-      const loginPassInput = document.getElementById("password")
-      if(loginPassInput.type === "password"){
-        loginPassInput.type = "text"
-        document.getElementById("showEyeLogin").className = "fa fa-eye-slash absolute right-5  bottom-[133px] cursor-pointer"
-      }else{
-        loginPassInput.type = "password"
-        document.getElementById("showEyeLogin").className = "fa-regular fa-eye absolute right-5  bottom-[133px] cursor-pointer"
-      }
-    })
+    //? login page validation
 
     const errorMsg = document.getElementById("errorMsg");
 
@@ -111,37 +98,20 @@ setInterval(() => {
       if (isValid) {
         // code to display another website or maybe delete it
         alert(`user ${email} signed in`)
-        showPage('homePage')
       }
-      
+      showPage('homePage')
     })
-
-
-    
 
     // ? Register Form code
 
-    document.getElementById("showEyeRegister").addEventListener('click' , (event) => {
-      const registerPassInput = document.getElementById("registerPassword")
-      if(registerPassInput.type === "password"){
-        registerPassInput.type = "text"
-        event.target.className = "fa fa-eye-slash absolute right-11  bottom-[290px] cursor-pointer"
-      }else{
-        registerPassInput.type = "password"
-        event.target.className = "fa-regular fa-eye absolute right-11  bottom-[290px] cursor-pointer"
-      }
-      
-    })
-    document.getElementById("loginHereBtn").addEventListener('click', () => {showPage('loginPage')})
-    
 
     document.getElementById("registerForm").addEventListener('submit' , (event) => {
         event.preventDefault()
         let isValid = true
         let errorMsg = document.getElementById('registerErrorMsg');
-        let email = document.getElementById("registerEmail").value;
-        let password = document.getElementById('registerPassword').value;
-        let confirmPassword = document.getElementById("confirm-passowrd").value;
+        let email = document.getElementById("registerEmail");
+        let password = document.getElementById('registerPassword');
+        let confirmPassword = document.getElementById("confirm-passowrd");
         let termsAccepted  = document.getElementById("terms").checked;
          // Email validation
       if (!email) {
@@ -178,7 +148,6 @@ setInterval(() => {
         // this.submit();
         
         alert(`Registerd with ${email}`); // Placeholder for actual submission
-        showPage('homePage')
       }
-      
+      showPage('homePage')
     })
