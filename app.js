@@ -109,9 +109,9 @@ setInterval(() => {
         event.preventDefault()
         let isValid = true
         let errorMsg = document.getElementById('registerErrorMsg');
-        let email = document.getElementById("registerEmail").value;
-        let password = document.getElementById('registerPassword').value;
-        let confirmPassword = document.getElementById("confirm-passowrd").value;
+        let email = document.getElementById("registerEmail");
+        let password = document.getElementById('registerPassword');
+        let confirmPassword = document.getElementById("confirm-passowrd");
         let termsAccepted  = document.getElementById("terms").checked;
          // Email validation
       if (!email) {
@@ -132,7 +132,7 @@ setInterval(() => {
       }
 
       // Confirm password validation
-      if (password !== confirmPassword) {
+      if (password.value !== confirmPassword.value) {
         errorMsg.textContent = 'Passwords do not match.';
         isValid = false;
       }

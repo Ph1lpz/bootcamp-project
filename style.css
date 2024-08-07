@@ -60,16 +60,18 @@ body {
     font-weight: 600;
     margin-bottom: 20px;
 }
-.testimonials .who-part .content{
-    margin-left: 40px;
-}
-.testimonials .who-part .content h2{
+
+.who-part .content h2{
     font-weight: 300;
 }
-.testimonials .who-part .content p{
-    color: #666;
+.who-part .content p{
+    color: #f1f1f1;
     padding: 20px 0;
     text-align: justify;
+}
+
+.our-role .who-part .content p {
+    color: #111;
 }
 
 /* ?? Swiper in clients section */
@@ -131,4 +133,59 @@ body {
     opacity: 1;
     color: rgb(83, 118, 234);
     font-size: 24px;
+}
+
+/* ?? Footer */
+
+.social-links li{
+    margin: 10px 0;
+    background-color: rgb(90,143,255);
+    border-radius: 14px;
+    padding: 15px 10px;
+    width: 150px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    text-align: center
+}
+
+.social-links li:hover{
+    color: rgb(90,143,255);
+    background-color: #fff;
+}
+
+.contact-data h4{
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.contact-data input{
+    padding: 20px 15px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+
+@media screen and (max-width: 668px){
+    .hero-content{
+        text-align: center;
+    }
+    .who-part{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .who-part .content{
+        margin: 15px 0;
+        padding: 20px ;
+    }
+    .who-part .content h2 {
+        font-size: 30px;
+    }
+    .who-part .content p{
+        font-size: 16px;
+    }
 }
