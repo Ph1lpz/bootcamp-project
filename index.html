@@ -7,7 +7,6 @@
     <link rel="icon" type="image/x-icon" href="/images/Logo.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
-
     <!-- ?? Swiper Slider -->
     <link
       rel="stylesheet"
@@ -130,7 +129,7 @@
       </div>
       <!--? Login menu Code -->
       <div
-        class="hidden absolute top-16 right-5 w-[300px] h-[300px] p-4 bg-gray-100 shadow-md rounded-md flex flex-col justify-around max-lg:top-56 max-lg:left-0 max-sm:w-auto"
+        class="hidden absolute top-16 right-5 w-[300px] h-[300px] p-4 bg-gray-100 shadow-md rounded-md flex flex-col justify-around max-lg:top-56 max-lg:left-0 max-sm:w-auto z-10"
         id="login-menu"
       >
         <div class="login-text">
@@ -160,24 +159,24 @@
     <section id="mainSection">
       <!--! home page code  -->
       <div id="homePage" class="page">
-        <section class="hero-section">
+        <section class="hero-section sectionEffect">
           <div class="hero-content">
             <h1>Be smart and take the first step into a new journey</h1>
             <button class="btn">Start your plan</button>
           </div>
         </section>
         <section class="testimonials container mx-auto py-16">
-          <div class="who-part flex justify-between py-5">
+          <div class="who-part flex justify-between py-5 max-lg:flex-wrap max-lg:justify-center text-center sectionEffect">
             <img
               src="https://placehold.co/500/png"
               alt="who-are-we-image"
               loading="lazy"
               decoding="async"
-              class="rounded-3xl"
+              class="rounded-3xl max-lg:my-10"
             />
             <div class="content md:pl-10 sm:pl-0 ">
-              <h2 class="text-5xl">Who are we?</h2>
-              <p>
+              <h2 class="text-5xl text-gray-100 fonmt-bold">Who are we?</h2>
+              <p class="max-sm:mx-3">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
                 deleniti quibusdam eum ipsa necessitatibus laudantium expedita
                 quas ratione, sequi culpa, sunt iste magnam veritatis eaque!
@@ -185,7 +184,7 @@
                 voluptatem distinctio debitis ullam, eius quo praesentium, quas
                 ipsam tenetur cum pariatur! Culpa ab minima eum accusamus non.
               </p>
-              <p>
+              <p class="max-sm:mx-3">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
                 delectus, impedit beatae ex minima aliquid quos in soluta
                 aspernatur quas nostrum. Eaque quidem, quia deleniti illum harum
@@ -195,23 +194,20 @@
               </p></div
             >
           </div>
-          <div class="clients py-8">
+          <div class="clients py-8 sectionEffect">
             <div class="container mx-auto">
               <div class="heading">
-                <h3>Our Clients</h3>
+                <h3 >Our Clients</h3>
                 <p>We helped a lot to start a new life.</p>
               </div>
-              <!-- Slider main container -->
               <div class="swiper">
-                <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                  <!-- Slides -->
                   <div class="swiper-slide">
                     <img
                       src="images/clinet1.jpg"
                       loading="lazy"
                       decoding="async"
-                      alt="test-img"
+                      alt="Client 1"
                     />
                     <p>Hamada</p>
                   </div>
@@ -220,7 +216,7 @@
                       src="images/clinet2.jpg"
                       loading="lazy"
                       decoding="async"
-                      alt="test-img"
+                      alt="Client 2"
                     />
                     <p>Hamada</p>
                   </div>
@@ -229,7 +225,7 @@
                       src="images/clinet3.jpg"
                       loading="lazy"
                       decoding="async"
-                      alt="test-img"
+                      alt="Client 3"
                     />
                     <p>Hamada</p>
                   </div>
@@ -238,24 +234,30 @@
                       src="images/clinet4.jpg"
                       loading="lazy"
                       decoding="async"
-                      alt="test-img"
+                      alt="Client 4"
                     />
                     <p>Hamada</p>
                   </div>
                   <div class="swiper-slide">
-                    <img src="images/clinet5.jpg" alt="test-img" />
+                    <img
+                      src="images/clinet5.jpg"
+                      loading="lazy"
+                      decoding="async"
+                      alt="Client 5"
+                    />
                     <p>Hamada</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
         </section>
-        <section class="our-role container mx-auto py-16">
+        <section class="our-role container mx-auto py-16 sectionEffect">
           <div class="who-part flex justify-between py-5">
             <div class="content md:pr-10 sm:pr-0">
-              <h2 class="text-4xl">Our Role is making you feel better</h2>
-              <p>
+              <h2 class="text-4xl text-gray-100 font-semibold">Our Role is making you feel better</h2>
+              <p class="text-gray-100">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
                 deleniti quibusdam eum ipsa necessitatibus laudantium expedita
                 quas ratione, sequi culpa, sunt iste magnam veritatis eaque!
@@ -281,7 +283,7 @@
             />
           </div>
         </section>
-        <footer class="container mx-auto md:py-7 ms:py-0">
+        <footer class="mt-[100px] container mx-auto md:py-7 ms:py-0">
             <div class="flex justify-evenly items-center flex-wrap">
               <div class="social-links">
                 <ul>
@@ -291,7 +293,7 @@
                   <li><a href="#" class="fa-brands fa-linkedin"></a></li>
                 </ul>
               </div>
-              <div class="contact-data">
+              <div class="contact-data text-gray-100">
                 <h4>Phone: +(20) 10 62226995</h4>
                 <h4>Email: zen-g@online.com</h4>
                 <h4>Cairo, Egypt</h4>
@@ -315,7 +317,7 @@
       </div>
       <!--! register page code -->
       <div id="registerPage" class="page" style="display: none">
-        <section class="bg-gray-50 dark:bg-gray-900">
+        <section class=" ">
           <div
             class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0"
           >
@@ -326,7 +328,7 @@
                 <h1
                   class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white"
                 >
-                  Create an account
+                  Create an account <i class="fa-regular fa-circle-user"></i>
                 </h1>
 
                 <form
@@ -342,7 +344,7 @@
                     <label
                       for="email"
                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Your email</label
+                      >Your email <i class="fa-regular fa-envelope"></i></label
                     >
                     <input
                       type="email"
@@ -357,7 +359,7 @@
                     <label
                       for="password"
                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Password</label
+                      >Password <i class="fa-solid fa-key"></i></label
                     >
                     <input
                       type="password"
@@ -372,7 +374,7 @@
                     <label
                       for="confirm-password"
                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Confirm password</label
+                      >Confirm password <i class="fa-solid fa-lock"></i></label
                     >
                     <input
                       type="confirm-password"
@@ -428,14 +430,15 @@
       </div>
       <!--! login page code -->
       <div id="loginPage" class="page" style="display: none">
-        <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+        
+        <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 ">
           <div
-            class="sm:mx-auto sm:w-full sm:max-w-sm flex flex-col items-center"
+            class="sm:mx-auto sm:w-full sm:max-w-sm flex flex-col items-center "
           >
-            <i class="fa-solid fa-lock text-3xl"></i>
+            <i class="fa-solid fa-lock text-3xl text-gray-100"></i>
             <h2
-              class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900"
-              >Sign in to your account</h2
+              class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-100"
+              >Sign in to your account </h2
             >
             <h2 id="errorMsg" class="text-red-500"></h2>
           </div>
@@ -450,8 +453,8 @@
               <div>
                 <label
                   for="email"
-                  class="block text-sm font-medium leading-6 text-gray-900"
-                  >Email address</label
+                  class="block text-sm font-medium leading-6 text-gray-100"
+                  >Email address <i class="fa-solid fa-envelope" style="color: #ffffff;"></i></label
                 >
                 <div class="mt-2">
                   <input
@@ -469,8 +472,8 @@
                 <div class="flex items-center justify-between">
                   <label
                     for="password"
-                    class="block text-sm font-medium leading-6 text-gray-900"
-                    >Password</label
+                    class="block text-sm font-medium leading-6 text-gray-100"
+                    >Password <i class="fa-solid fa-key" style="color: #ffffff;"></i></label
                   >
                   <div class="text-sm">
                     <a

@@ -5,25 +5,25 @@ const loginMenu = document.getElementById("login-menu");
 const loginMenuBtn = document.getElementById("login-menu-btn");
 
 // ? Swiper Run
-
 const swiper = new Swiper('.swiper', {
   loop: true,
-  slidesPerView: "auto",
+  slidesPerView: 'auto',
   grabCursor: true,
-  initalSlide:4,
+  initialSlide: 4,
   centeredSlides: true,
   spaceBetween: 18,
   freeMode: false,
-  speed: 1000,
+  speed: 500,
   autoplay: {
-    delay: 5000,
+    delay: 7000,
+    disableOnInteraction: false,
   },
-  on:{
-    click(event){
-      swiper.slideTo(this.clickedIndex);
-    }
-  }
-  
+  lazy: {
+    loadPrevNext: true, // Load nearby slides lazily
+  },
+  preloadImages: false, // Disable preloading of all images
+  watchSlidesVisibility: true, // Load visible slides
+  watchSlidesProgress: true,
 });
 
 
@@ -150,4 +150,21 @@ setInterval(() => {
         alert(`Registerd with ${email}`); // Placeholder for actual submission
       }
       showPage('homePage')
+    })
+
+    //? section effect code
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show')
+        } else {
+          entry.target.classList.remove('show')
+        }
+      })
+    })
+
+    const homeSections = document.querySelectorAll('.sectionEffect')
+
+    homeSections.forEach((section) => {
+      observer.observe(section)
     })
