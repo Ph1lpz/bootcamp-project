@@ -154,7 +154,16 @@
       <!--? Login menu code end -->
     </nav>
     <!-- Nav Code End -->
-
+       <!-- Error Bar Code -->
+<div id="loginErrorBar" style="display: none;">
+  <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+    <strong class="font-bold">Error</strong>
+    <span class="block sm:inline">You must login first to choose your plan</span>
+    <span class="absolute top-0 bottom-0 right-0 px-4 py-3" id="closeBtn">
+      <svg class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+    </span>
+  </div>
+</div>
     <!--! Pages code -->
     <section id="mainSection">
       <!--! home page code  -->
@@ -577,7 +586,8 @@
                     >
                   </div>
                 </div>
-                <div class="mt-2">
+                <div class="mt-2 relative">
+                  <i id="loginShowEye" class="fa-regular fa-eye absolute cursor-pointer right-3 top-3"></i>
                   <input
                     id="password"
                     name="password"
