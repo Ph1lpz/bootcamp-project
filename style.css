@@ -415,3 +415,134 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(34,3,61,1) 26%);
     white-space: nowrap;
     width: 1px;
   }
+
+
+  /* ?? Contact Us page */
+
+  #title-Tag-Line {
+    font-size: 20px;
+  }
+  /* .card-item__bg{
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    display: block;
+    position: relative;
+    margin: 30px auto;
+    transform: translate(0px, 50px);
+    z-index: 5;
+  } */
+  
+  /* form animation starts */
+  #contactPage .form {
+    background: #fff;
+    box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+    border-radius: 5px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    border-top: 5px solid #371D7E;
+  /*   z-index: 1; */
+    animation: bounce 1.5s infinite;
+  }
+  #contactPage ::-webkit-input-placeholder {
+    font-size: 1.3em;
+  }
+  
+  #contactPage .title{
+    display: block;
+    font-family: sans-serif;
+    margin: 10px auto 5px;
+    width: 300px;
+  }
+  #contactPage .termsConditions{
+    margin: 0 auto 5px 80px;
+  }
+  
+  #contactPage .pageTitle{
+    font-size: 2em;
+    font-weight: bold;
+  }
+  #contactPage  .secondaryTitle{
+    color: grey;
+  }
+  
+  #contactPage .name {
+    background-color: #ebebeb;
+    color: white;
+    transition: border-bottom 0.5s ease-in-out;
+    transition: padding 0.5s ease-in-out;
+  }
+  #contactPage .name:hover {
+    border-bottom: 5px solid #371D7E;
+    padding: 20px;
+  }
+  
+  #contactPage  .email {
+    background-color: #ebebeb;
+    height: 2em;
+    transition: border-bottom 1s ease-in-out;
+    transition: padding 0.5s ease-in-out;
+  }
+  
+  #contactPage .email:hover {
+    border-bottom: 5px solid #371D7E;
+    padding: 20px;
+  }
+  
+  #contactPage .message {
+    background-color: #ebebeb;
+    overflow: hidden;
+    height: 10rem;
+    transition: border-bottom 1s ease-in-out;
+    transition: padding 1s ease-in-out;
+  }
+  
+  #contactPage .message:hover {
+    border-bottom: 5px solid #371D7E;
+    padding: 20px;
+  }
+  
+  #contactPage .formEntry {
+    display: block;
+    margin: 30px auto;
+    min-width: 300px;
+    padding: 10px;
+    border-radius: 2px;
+    border: none;
+    transition: all 0.5s linear;
+  }
+  
+  #contactPage .submit {
+    width: 200px;
+    color: white;
+    background-color: #371D7E;
+    font-size: 20px;
+    transition: all ease-in-out 0.8s;
+  }
+  
+  #contactPage .submit:hover {
+    box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+    transform: translateY(-3px);
+    width: 300px;
+    border-top: 5px solid #0e3750;
+    border-radius: 0%;
+  }
+  
+  @keyframes bounce {
+    0% {
+      tranform: translate(0, 4px);
+    }
+    50% {
+      transform: translate(0, 8px);
+    }
+  } 
+  
+  
