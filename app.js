@@ -57,7 +57,6 @@ setInterval(() => {
     }
       //? show page Btns
     document.getElementById('homeBtn').addEventListener('click', () => showPage('homePage'));
-    document.getElementById('aboutBtn').addEventListener('click', () => showPage('aboutPage'));
     document.getElementById('contactBtn').addEventListener('click', () => showPage('contactPage'));
     document.getElementById('registerBtn').addEventListener('click', () => showPage('registerPage'));
     document.getElementById('login-menu-btn').addEventListener('click', () => showPage('loginPage'))
