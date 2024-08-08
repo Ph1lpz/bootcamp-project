@@ -72,7 +72,7 @@
     >
       <div class="flex items-center flex-shrink-0 text-white mr-6">
         <span class="font-semibold text-xl tracking-tight mySpan p-1 rounded-md"
-          >Gen-Z</span
+          >Zen-G</span
         >
       </div>
       <div class="block lg:hidden">
@@ -162,7 +162,7 @@
         <section class="hero-section sectionEffect">
           <div class="hero-content">
             <h1>Be smart and take the first step into a new journey</h1>
-            <button class="btn">Start your plan</button>
+            <button class="btn showPlanBtn">Start your plan</button>
           </div>
         </section>
         <section class="testimonials container mx-auto py-16">
@@ -254,9 +254,9 @@
 
         </section>
         <section class="our-role container mx-auto py-16 sectionEffect">
-          <div class="who-part flex justify-between py-5">
-            <div class="content md:pr-10 sm:pr-0">
-              <h2 class="text-4xl text-gray-100 font-semibold">Our Role is making you feel better</h2>
+          <div class="who-part flex justify-between   py-5 max-lg:flex-wrap-reverse max-lg:justify-center text-center max-lg:mx-3">
+            <div class=" content md:pr-10 sm:pr-0 ">
+              <h2 class="text-4xl text-gray-100 font-semibold my-10">Our Role is making you feel better</h2>
               <p class="text-gray-100">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
                 deleniti quibusdam eum ipsa necessitatibus laudantium expedita
@@ -271,7 +271,7 @@
                 aspernatur quas nostrum. Eaque quidem, quia deleniti illum harum
                 voluptatum architecto maxime quae quis, nesciunt saepe accusamus
                 ipsa rem aspernatur fuga? Inventore tenetur alias magnam! Velit
-                ex porro facere, iusto exercitationem quis!
+                ex porro facere, iusto exercitationem quis!       <button class="btn showPlanBtn m-1 py-2">Start your plan</button>
               </p>
             </div>
             <img
@@ -315,6 +315,111 @@
       <div id="contactPage" class="page" style="display: none">
         <h1>contact page</h1>
       </div>
+
+
+       <!--! Plan page code -->
+       <div id="planPage" class="page" style="display: none">
+        <div class="text-center heading">
+          <h3 style="color: #fff;">Here we go!!!</h3>
+          <p>Now you are on the first step out of succsess</h4>
+        </div>
+        <div class="container mx-auto">
+          <!-- code here -->
+          <div class="card">
+            <div class="card-image">
+              <h2 class="card-heading">
+                Get started
+                <small>Let us Know about you</small>
+              </h2>
+            </div>
+            <form class="card-form">
+              <div class="input">
+                <input
+                  type="text"
+                  class="input-field"
+                  required
+                />
+                <label class="input-label">Full name</label>
+              </div>
+              <div class="input">
+                <input
+                  type="text"
+                  class="input-field"
+                  required
+                />
+                <label class="input-label">Email</label>
+              </div>
+              <div class="input">
+                <input
+                  type="number"
+                  min="14"
+                  max="99"
+                  class="input-field"
+                  required
+                />
+                <label class="input-label">Age</label>
+              </div>
+              <div class="input">
+                <textarea
+                  name=""
+                  class="input-field"
+                  placeholder="I started to smoke when..."
+                  cols="30"
+                  rows="3"
+                ></textarea>
+                <label>Reasone for smoke ?</label>
+              </div>
+              <div class="input">
+                <textarea
+                  name=""
+                  class="input-field"
+                  placeholder="I want to stop because of..."
+                  cols="30"
+                  rows="3"
+                ></textarea>
+                <label>Reasone for quit ?</label>
+              </div>
+              <h2 class="my-2">What do you smoke ?</h2>
+              <div class="radio-inputs">
+                <label>
+                  <input class="radio-input" type="radio" name="engine" />
+                  <span class="radio-tile">
+                    <span class="radio-icon">
+                      <i class="fa-solid fa-smoking"></i>
+                    </span>
+                    <span class="radio-label">Cigarettes</span>
+                  </span>
+                </label>
+                <label>
+                  <input
+                    checked=""
+                    class="radio-input"
+                    type="radio"
+                    name="engine"
+                  />
+                  <span class="radio-tile">
+                    <span class="radio-icon"> 
+                      <i class="fa-solid fa-joint"></i>
+                    </span>
+                    <span class="radio-label">Vapes</span>
+                  </span>
+                </label>
+              </div>
+              <div class="action">
+                <button class="action-button">submit your application</button>
+              </div>
+            </form>
+            <div class="card-info">
+              <p
+                >By submiting up you are agreeing to our
+                <a href="#">Terms and Conditions</a></p
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <!--! register page code -->
       <div id="registerPage" class="page" style="display: none">
         <section class=" ">
@@ -429,9 +534,9 @@
         </section>
       </div>
       <!--! login page code -->
-      <div id="loginPage" class="page" style="display: none">
+      <div id="loginPage" class="page " style="display: none">
         
-        <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 ">
+        <div class="flex h-[90vh] min-h-full flex-col justify-center px-6 py-12 lg:px-8  ">
           <div
             class="sm:mx-auto sm:w-full sm:max-w-sm flex flex-col items-center "
           >
@@ -463,7 +568,7 @@
                     type="email"
                     autocomplete="email"
                     required
-                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2.5  outline-none"
                   />
                 </div>
               </div>
@@ -490,7 +595,7 @@
                     type="password"
                     autocomplete="current-password"
                     required
-                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2.5 outline-none"
                   />
                 </div>
               </div>
@@ -516,6 +621,7 @@
           </div>
         </div>
       </div>
+        
     </section>
 
     <!-- Swiper JS -->

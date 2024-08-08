@@ -168,3 +168,12 @@ setInterval(() => {
     homeSections.forEach((section) => {
       observer.observe(section)
     })
+
+    const showPlanBtns = document.querySelectorAll('.showPlanBtn');
+
+    console.log(showPlanBtns);
+    showPlanBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        showPage('planPage')
+      })
+    })
