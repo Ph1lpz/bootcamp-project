@@ -98,6 +98,7 @@ setInterval(() => {
         // code to display another website or maybe delete it
         alert(`user ${email} signed in`)
       }
+      logged(isValid)
       showPage('homePage')
     })
 
@@ -108,9 +109,9 @@ setInterval(() => {
         event.preventDefault()
         let isValid = true
         let errorMsg = document.getElementById('registerErrorMsg');
-        let email = document.getElementById("registerEmail");
-        let password = document.getElementById('registerPassword');
-        let confirmPassword = document.getElementById("confirm-passowrd");
+        let email = document.getElementById("registerEmail").value;
+        let password = document.getElementById('registerPassword').value;
+        let confirmPassword = document.getElementById("confirm-password").value;
         let termsAccepted  = document.getElementById("terms").checked;
          // Email validation
       if (!email) {
@@ -147,8 +148,9 @@ setInterval(() => {
         // this.submit();
         
         alert(`Registerd with ${email}`); // Placeholder for actual submission
+        showPage('homePage')
       }
-      showPage('homePage')
+     
     })
 
     //? section effect code
@@ -169,10 +171,40 @@ setInterval(() => {
     })
 
     const showPlanBtns = document.querySelectorAll('.showPlanBtn');
+    const errorBar = document.getElementById('loginErrorBar')
 
-    console.log(showPlanBtns);
-    showPlanBtns.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        showPage('planPage')
+    
+
+    function logged(isLogged) {
+      showPlanBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          if(isLogged) {
+            showPage('planPage') 
+          }
+          else{
+            showPage('loginPage')
+            errorBar.style.display = "block"
+          }
+        })
       })
-    })
+  
+    }
+logged()
+
+
+document.getElementById('closeBtn').addEventListener('click' , () => {
+  errorBar.remove()
+})
+
+
+document.getElementById('loginShowEye').addEventListener('click' ,(e) => {
+  const passwordInput = document.getElementById('password');
+  if(passwordInput.type === "password"){
+    passwordInput.type = "text"
+    e.target.className =  "fa-regular fa-eye-slash absolute cursor-pointer right-3 top-3"
+  }
+  else {
+    passwordInput.type = "password"
+    e.target.className = "fa-regular fa-eye absolute cursor-pointer right-3 top-3"
+  }
+})
